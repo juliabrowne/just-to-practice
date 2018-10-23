@@ -1,0 +1,22 @@
+{
+  "name": "reduxCounter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --mode development ./src/main.js --output ./dist/bundle.js --content-base dist/ --hot"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "redux-devtools-extension": "^2.13.5",
+    "webpack": "^4.22.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "redux": "^4.0.1"
+  }
+}
