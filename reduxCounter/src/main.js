@@ -5,13 +5,15 @@ import {
 import {
     decrementCount
 } from './redux/modules/counter';
+import {
+    updateCounterName
+} from './redux/modules/name';
 
 
 const incrementButton = document.getElementById("increment");
 const decrementButton = document.getElementById("decrement");
 const count = document.getElementById("count");
 
-// How will we initially populate this span with content?
 count.textContent = null;
 incrementButton.addEventListener("click", () => {
     store.dispatch(incrementCount());
@@ -22,6 +24,14 @@ decrementButton.addEventListener("click", () => {
     count.textContent = store.getState().counter.count;
 });
 
+
+const nameInput = document.getElementById("name");
+const countedName = document.getElementById("counted-name");
+
+nameInput.addEventListener("input", event => {
+    store.dispatch(updateCounterName(event.target.value));
+    countedName.textContent = store.getState().counterName.name;
+});
 
 
 // // GET WHOLE STATE FROM OUR REDUX STORE
